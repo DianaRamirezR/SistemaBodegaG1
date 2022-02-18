@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SistemaBodegaG1.BodegasWS.Bodega>
+@{
+    ViewBag.Title = "EncontrarBod";
+}
+
+<h2>@ViewData["Message"]</h2>
+<p>
+    @Html.ActionLink("Actualizar Datos", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @ViewBag.Titulo1
+        </th>
+        <th>
+            @ViewBag.Titulo2
+        </th>
+        <th>
+            @ViewBag.Titulo3
+        </th>
+        <th>
+            @ViewBag.Titulo4
+        </th>
+        <th>
+            @ViewBag.Titulo5
+        </th>
+    </tr>
+    @foreach (var item in Model)
+            {
+        <tr>
+            <td>
+                 @Html.DisplayFor(modelItem => item.IdBodega)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contacto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                 @Html.ActionLink("Hacer Pedido", "Hpedido", new { id = item.IdBodega.Trim() })
+                @Html.ActionLink("pedido","enviar","",)
+            </td>
+        </tr>
+            }
+</table>
+

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaBodegaG1", "SistemaBodegaG1\SistemaBodegaG1.csproj", "{0100F00C-1DE4-4BB6-BF64-054589C285A7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{79B51584-08D9-4EEF-99B6-06E07A0AEDF2} = {79B51584-08D9-4EEF-99B6-06E07A0AEDF2}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bodegaCPWSSOAP", "bodegaCPWSSOAP\bodegaCPWSSOAP.csproj", "{79B51584-08D9-4EEF-99B6-06E07A0AEDF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0100F00C-1DE4-4BB6-BF64-054589C285A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0100F00C-1DE4-4BB6-BF64-054589C285A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0100F00C-1DE4-4BB6-BF64-054589C285A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0100F00C-1DE4-4BB6-BF64-054589C285A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B51584-08D9-4EEF-99B6-06E07A0AEDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B51584-08D9-4EEF-99B6-06E07A0AEDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B51584-08D9-4EEF-99B6-06E07A0AEDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B51584-08D9-4EEF-99B6-06E07A0AEDF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D719AD0-6F58-4C29-A7B5-686164F466EC}
+	EndGlobalSection
+EndGlobal

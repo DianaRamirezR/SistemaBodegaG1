@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BodegaBCService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:63464/BodegaBCService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:63464/BodegaBCService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/bodegaCPWSSOAP.Errores" />
+      <xsd:import schemaLocation="http://localhost:63464/BodegaBCService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:63464/BodegaBCService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/bodegaCPWSSOAP.Dominio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBodegaBCService_CrearCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearCliente" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_CrearCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_CrearCliente_ErroresExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/bodegaCPWSSOAP.Errores" name="detail" element="q1:ErroresException" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_ObtenerCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCliente" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_ObtenerCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_Modificarcliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:Modificarcliente" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_Modificarcliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificarclienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_ObtenerBodega_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBodega" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_ObtenerBodega_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBodegaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_ListarBodegas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarBodegas" />
+  </wsdl:message>
+  <wsdl:message name="IBodegaBCService_ListarBodegas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarBodegasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBodegaBCService">
+    <wsdl:operation name="CrearCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBodegaBCService/CrearCliente" message="tns:IBodegaBCService_CrearCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBodegaBCService/CrearClienteResponse" message="tns:IBodegaBCService_CrearCliente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBodegaBCService/CrearClienteErroresExceptionFault" name="ErroresExceptionFault" message="tns:IBodegaBCService_CrearCliente_ErroresExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBodegaBCService/ObtenerCliente" message="tns:IBodegaBCService_ObtenerCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBodegaBCService/ObtenerClienteResponse" message="tns:IBodegaBCService_ObtenerCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Modificarcliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBodegaBCService/Modificarcliente" message="tns:IBodegaBCService_Modificarcliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBodegaBCService/ModificarclienteResponse" message="tns:IBodegaBCService_Modificarcliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBodega">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBodegaBCService/ObtenerBodega" message="tns:IBodegaBCService_ObtenerBodega_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBodegaBCService/ObtenerBodegaResponse" message="tns:IBodegaBCService_ObtenerBodega_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarBodegas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBodegaBCService/ListarBodegas" message="tns:IBodegaBCService_ListarBodegas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBodegaBCService/ListarBodegasResponse" message="tns:IBodegaBCService_ListarBodegas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBodegaBCService" type="tns:IBodegaBCService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CrearCliente">
+      <soap:operation soapAction="http://tempuri.org/IBodegaBCService/CrearCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErroresExceptionFault">
+        <soap:fault use="literal" name="ErroresExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCliente">
+      <soap:operation soapAction="http://tempuri.org/IBodegaBCService/ObtenerCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modificarcliente">
+      <soap:operation soapAction="http://tempuri.org/IBodegaBCService/Modificarcliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBodega">
+      <soap:operation soapAction="http://tempuri.org/IBodegaBCService/ObtenerBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarBodegas">
+      <soap:operation soapAction="http://tempuri.org/IBodegaBCService/ListarBodegas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BodegaBCService">
+    <wsdl:port name="BasicHttpBinding_IBodegaBCService" binding="tns:BasicHttpBinding_IBodegaBCService">
+      <soap:address location="http://localhost:63464/BodegaBCService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

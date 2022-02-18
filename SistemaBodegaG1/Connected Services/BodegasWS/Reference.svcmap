@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2b910f1e-4777-4a48-945f-e462b53a8898" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:63464/BodegaBCService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BodegaBCService.wsdl" MetadataType="Wsdl" ID="9c9ec78f-79ff-498b-a0b4-26f917895e2f" SourceId="1" SourceUrl="http://localhost:63464/BodegaBCService.svc?wsdl" />
+    <MetadataFile FileName="BodegaBCService.xsd" MetadataType="Schema" ID="bb23fede-752b-401d-b638-c824f165974e" SourceId="1" SourceUrl="http://localhost:63464/BodegaBCService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BodegaBCService1.xsd" MetadataType="Schema" ID="a1bad3de-d802-4ac6-9e84-f1d520604750" SourceId="1" SourceUrl="http://localhost:63464/BodegaBCService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BodegaBCService2.xsd" MetadataType="Schema" ID="0a654181-59af-47f4-b553-7a2980976f63" SourceId="1" SourceUrl="http://localhost:63464/BodegaBCService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BodegaBCService3.xsd" MetadataType="Schema" ID="fabc277f-abac-456a-ae3e-e43c8bc8f749" SourceId="1" SourceUrl="http://localhost:63464/BodegaBCService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BodegaBCService.disco" MetadataType="Disco" ID="939aa6ae-bde3-43ef-8074-0f29d6ac53fc" SourceId="1" SourceUrl="http://localhost:63464/BodegaBCService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
